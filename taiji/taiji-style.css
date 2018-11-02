@@ -1,0 +1,57 @@
+.taiji {
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+  border-bottom-width: 200px;
+  position: relative;
+  transform:rotate(90deg);
+}
+.taiji::before{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: white;  
+  top: 50%;
+  left: 0;
+  border: 60px solid black;
+  border-radius: 50%;
+}
+.taiji::after{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: black;  
+  top: 50%;
+  right: 0;
+  border: 60px solid white;
+  border-radius: 50%;
+}
+.taiji:hover{
+    /*-webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+    -webkit-transition:-webkit-transform 1s linear;
+    transition:transform 5s linear; */
+    -webkit-animation: spin 5s linear infinite; 
+    animation: spin 5s linear infinite;
+}
+@-webkit-keyframes spin {
+  from {
+      -webkit-transform: rotate(90deg);
+  }
+  to {
+      -webkit-transform: rotate(450deg);
+  }
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(90deg);
+  }
+  to {
+      transform: rotate(450deg);
+  }
+}
