@@ -80,4 +80,6 @@ typings/
 .dynamodb/
 
 # IDE附带
-.idea/
+.idea/*
+
+.vscode/*
