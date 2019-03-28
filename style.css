@@ -83,24 +83,20 @@ section.skills >ol{ /* border: 1px solid red; */ background-color: white; paddin
 section.skills >h2,
 section.portfolio >h2{ text-align: center; margin-bottom: 28px; margin-top: 28px; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600;}
 
-section.portfolio >h2{ margin-bottom: 0;}
-section.portfolio { text-align: center; margin-bottom: 100px;}
-section.portfolio >nav{ text-align: center;  display: inline-block; vertical-align: top; margin-top: 32px;}
-section.portfolio >nav >ol{ margin: 0 auto; display: inline-block; vertical-align: top;}
-section.portfolio >nav >ol >li{ float: left; margin-left: 40px; cursor: pointer;}
-section.portfolio >nav >ol >li:first-child{ margin-left: 0; padding-left: 6px;}
-section.portfolio >nav >ol >li:nth-child(3){padding-right: 6px;}
-section.portfolio >nav .bar{ height: 5px;background: white; margin-top: 5px;margin-bottom: 28px; border-radius: 2px;}
-section.portfolio >nav .bar-inner{ height: 100%; background: #E6686A; border-radius: 2px; transition: all 0.3s;}
-section.portfolio > nav .bar.state-1 .bar-inner{ margin-left: 0; width: 44px;}
-section.portfolio > nav .bar.state-2 .bar-inner{ margin-left: 78px; width: 44px;}
-section.portfolio > nav .bar.state-3 .bar-inner{ margin-left: 152px; width: 118px;}
+section.portfolio >h2{ margin-bottom: 46px;}
+section.portfolio { text-align: center; margin-bottom: 100px;  }
+section.portfolio .swiper-container {width: 668px;height: 501px;}
 
-section.portfolio .works{ position: relative; height: 597px;}
-section.portfolio .works > .big,
-section.portfolio .works > .small1,
-section.portfolio .works > .small2{position: absolute;}
-section.portfolio .big{ top: 0; left: 0;}
-section.portfolio .small1{ top: 0; left: 624px;}
-section.portfolio .small2{top: 312px; left: 624px;}
-section.portfolio img{box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);}
+.swiper-button-prev,
+.swiper-button-next{
+  background-color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-top: 32px;
+
+
+
+
+
+}

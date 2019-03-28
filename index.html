@@ -23,12 +23,16 @@
     .site-welcome.active{display: flex;}
     .icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
 </style> -->
-<link rel="stylesheet" href="./main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <div id="siteWelcome" class="site-welcome active">
-    <div class="loading"></div>
-  </div>
+  <!--<div id="siteWelcome" class="site-welcome active">-->
+    <!--<div class="loading"></div>-->
+  <!--</div>-->
   <div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo" style="float: left;">
@@ -174,123 +178,42 @@
   
   <section data-x id="siteWorks" class="portfolio">
     <h2>作 品 集</h2>
-    <nav>
-      <ol class="clearfix">
-        <li id="portfolio1">所 有</li>
-        <li id="portfolio2">框 架</li>
-        <li id="portfolio3">原 生 JS & CSS</li>
-      </ol>
-      <div id="portfolioBar" class="bar state-1">
-          <div class="bar-inner"></div>
-        </div>
-        <script>
-            portfolio1.onclick= function(){
-              portfolioBar.className = 'bar state-1'
-            }
-            portfolio2.onclick= function(){
-              portfolioBar.className = 'bar state-2'
-            }
-            portfolio3.onclick= function(){
-              portfolioBar.className = 'bar state-3'
-            }
-          </script>
-    </nav>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <img class="swiper-slide" src="./img/works/nav-keyboard.jpg">
+        <img class="swiper-slide" src="./img/works/canvas.jpg">
+        <img class="swiper-slide" src="./img/works/slides.jpg">
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
 
-    <div class="works">
-      <div class="big">
-        <img src="./img/1.jpg" alt="作品1">
-      </div>
-      <div class="small1">
-        <img src="./img/2.jpg" alt="作品2">
-      </div>
-      <div class="small2">
-        <img src="./img/3.jpg" alt="作品3">
-      </div>
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
 
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>  <!--缓动插件-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  <script src="main.js"></script>
+
   <script>
-    // setTimeout(function(){
-    //   siteWelcome.classList.remove('active')
-    // },500)
-   
-   //添加offset类
-    let specialtags = document.querySelectorAll('[data-x]')
-    for(let i=0;i<specialtags.length; i++){
-      specialtags[i].classList.add('offset')
-    }
+      var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'horizontal', // 垂直切换选项
+          loop: true, // 循环模式选项
 
-    findClosest()
-    window.onscroll = function(x){
-      if(window.scrollY > 0){
-        topNavBar.classList.add('sticky')
-      }else{
-        topNavBar.classList.remove('sticky')
-      }
-      findClosest()
-    }
-    //寻找元素与窗口顶部最近的距离
-    function findClosest(){
-      let specialTags = document.querySelectorAll('[data-x]')
-      let minIndex = 0
-      for(let i =0;i< specialTags.length; i++){
-        if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
-          minIndex = i
-        }
-      }
-      //minIndex 是离窗口顶部最近的元素
-      specialTags[minIndex].classList.remove('offset')
-      let id = specialTags[minIndex].id
-      let a = document.querySelector('a[href="#'+ id +'"]')
-      let li = a.parentNode
-      let brothersAndMe = li.parentNode.children
-      for(let i =0;i< brothersAndMe.length;i++){
-        brothersAndMe[i].classList.remove('highlight')
-      }
-      li.classList.add('highlight')
-    }
+          // 如果需要分页器
+          pagination: {
+              el: '.swiper-pagination',
+          },
 
-    let liTags = document.querySelectorAll('nav.menu > ul >li')
-    for(let i=0; i<liTags.length; i++){
-      liTags[i].onmouseenter = function(x){
-        x.currentTarget.classList.add('active')
-      }
-      liTags[i].onmouseleave = function(x){
-        x.currentTarget.classList.remove('active')
-      }
-    }
-
-    let aTags = document.querySelectorAll('nav.menu > ul > li >a')
-    function animate(time){
-      requestAnimationFrame(animate)
-      TWEEN.update(time)
-    }
-    requestAnimationFrame(animate)
-    for(let i=0; i<aTags.length; i++){
-      aTags[i].onclick = function(x){
-        x.preventDefault()
-        let a = x.currentTarget
-        let href = a.getAttribute('href') //'#siteAbout'
-        let element = document.querySelector(href)
-        let top = element.offsetTop
-        let currentTop = window.scrollY
-        let targetTop = top - 80
-        let s = targetTop - currentTop //路程
-        let coords = {y: currentTop}   //起始位置
-        var t = Math.abs((s/100)*200)  //时间
-        var tween = new TWEEN.Tween(coords) //起始位置
-          .to({ y: targetTop},t)            //结束位置 和 时间
-          .easing(TWEEN.Easing.Cubic.InOut) //缓动类型
-          .onUpdate(function(){
-            // coords.y已经改变
-            window.scrollTo(0,coords.y)  //更新界面
-          })
-          .start() //开始缓动
-          console.log(1)
-    }
-    }
+          // 如果需要前进后退按钮
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+      })
   </script>
 </body>
 </html>
