@@ -178,19 +178,20 @@
   
   <section data-x id="siteWorks" class="portfolio">
     <h2>作 品 集</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <img class="swiper-slide" src="./img/works/nav-keyboard.jpg">
-        <img class="swiper-slide" src="./img/works/canvas.jpg">
-        <img class="swiper-slide" src="./img/works/slides.jpg">
+    <div id="mySlides">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <img class="swiper-slide" src="./img/works/nav-keyboard.jpg">
+          <img class="swiper-slide" src="./img/works/canvas.jpg">
+          <img class="swiper-slide" src="./img/works/slides.jpg">
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
       </div>
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
-
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
 
   </section>
 
@@ -198,7 +199,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 
   <!--模块化-->
-  <script src="js/init-swiper"></script>
+  <script src="js/init-swiper.js"></script>
   <script src="js/auto-slide-up.js"></script>
   <script src="js/sticky-topbar.js"></script>
   <script src="js/smoothly-navigation.js"></script>
