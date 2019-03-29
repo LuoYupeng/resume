@@ -1,42 +1,4 @@
-// setTimeout(function(){
-//   siteWelcome.classList.remove('active')
-// },500)
 
-//添加offset类
-let specialtags = document.querySelectorAll('[data-x]')
-for(let i=0;i<specialtags.length; i++){
-    specialtags[i].classList.add('offset')
-}
-
-findClosest()
-window.onscroll = function(x){
-    if(window.scrollY > 0){
-        topNavBar.classList.add('sticky')
-    }else{
-        topNavBar.classList.remove('sticky')
-    }
-    findClosest()
-}
-//寻找元素与窗口顶部最近的距离
-function findClosest(){
-    let specialTags = document.querySelectorAll('[data-x]')
-    let minIndex = 0
-    for(let i =0;i< specialTags.length; i++){
-        if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
-            minIndex = i
-        }
-    }
-    //minIndex 是离窗口顶部最近的元素
-    specialTags[minIndex].classList.remove('offset')
-    let id = specialTags[minIndex].id
-    let a = document.querySelector('a[href="#'+ id +'"]')
-    let li = a.parentNode
-    let brothersAndMe = li.parentNode.children
-    for(let i =0;i< brothersAndMe.length;i++){
-        brothersAndMe[i].classList.remove('highlight')
-    }
-    li.classList.add('highlight')
-}
 
 let liTags = document.querySelectorAll('nav.menu > ul >li')
 for(let i=0; i<liTags.length; i++){
