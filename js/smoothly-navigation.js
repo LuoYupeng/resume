@@ -16,7 +16,7 @@
             }
             requestAnimationFrame(animate)
         },
-        scrollToElement: function(){
+        scrollToElement: function(element){
             let top = element.offsetTop
 
             let currentTop = window.scrollY

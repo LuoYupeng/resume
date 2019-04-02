@@ -10,10 +10,6 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 [data-x].active{outline: 10px solid red;}
 [data-x].offset{transform : translateY(100px);}
 [data-x]{transform: translateY(0); transition: all 0.8s;}
-@keyframes slideUp{
-  0% {transform: translateY(-30px)};
-  100% {transform: translateY(0)};
-}
 
 .topNavBar {padding:20px 0px 20px 0px;position: fixed;top: 0;left: 0;width: 100%; transition: all 0.5s; color: #b7b7b7;}
 .topNavBar.sticky{background: white; padding: 10px 0; z-index: 1; box-shadow:0 0 10px rgba(0,0,0,0.25);color: #3d4451;}
@@ -81,17 +77,36 @@ section.skills >ol >li:nth-child(even){float: right;}
 section.skills >ol{ /* border: 1px solid red; */ background-color: white; padding: 40px 50px 10px 50px; box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.5);}
 
 section.skills >h2,
-section.portfolio >h2{ text-align: center; margin-bottom: 28px; margin-top: 28px; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600;}
+section.portfolio >h2,
+section.message >h2{ text-align: center; margin-bottom: 28px; margin-top: 28px; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600;}
 
 section.portfolio >h2{ margin-bottom: 46px;}
 section.portfolio { text-align: center; margin-bottom: 100px;  }
 section.portfolio .swiper-container {width: 668px;height: 501px;}
 
 .swiper-button-prev,
-.swiper-button-next{
-  background-color: white;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  margin-top: 32px;
+.swiper-button-next{background-color: white;width: 64px;height: 64px;border-radius: 50%;margin-top: 32px;}
+
+section.message{
+  margin-bottom: 50px;
+}
+
+section.message > ol{
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: 1px solid #DDD;
+}
+
+
+section.message > ol > li {
+  padding: 16px;
+  border-bottom: 1px solid #DDD;
+}
+
+section.message > #postMessageForm{
+  max-width: 700px;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center
 }

@@ -73,7 +73,7 @@
 
   <main>
 
-    <div  data-x id="siteAbout" class="userCard">
+    <div  data-x  id="siteAbout" class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
           <img src="./img/avatar.jpg" alt="头像" width="299" height="347">
@@ -192,16 +192,30 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
+  </section>
 
+  <section  class="message" >
+    <h2>留言</h2>
+    <ol id="messageList">
+    </ol>
+    <form id="postMessageForm" >
+      <label for="">姓名:</label>
+      <input type="text" name="name">
+      <label for="">内容:</label>
+      <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>  <!--缓动插件-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
 
   <!--模块化-->
   <script src="js/init-swiper.js"></script>
   <script src="js/auto-slide-up.js"></script>
   <script src="js/sticky-topbar.js"></script>
   <script src="js/smoothly-navigation.js"></script>
+  <script src="js/message.js"></script>
 </body>
 </html>

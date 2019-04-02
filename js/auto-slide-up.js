@@ -1,8 +1,9 @@
 !function () {
     //添加offset类
-    let specialtags = document.querySelectorAll('[data-x]')
-    for (let i = 0; i < specialtags.length; i++) {
-        specialtags[i].classList.add('offset')
+    let specialTags = document.querySelectorAll('[data-x]')
+
+    for (let i = 0; i < specialTags.length; i++) {
+        specialTags[i].classList.add('offset')
 
     }
 
@@ -16,7 +17,7 @@
     function findClosestAndRemoveOffSet() {
         let specialTags = document.querySelectorAll('[data-x]')
         let minIndex = 0
-        for (let i = 0; i < specialTags.length; i++) {
+        for (let i = 1; i < specialTags.length; i++) {
             if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
                 minIndex = i
             }
