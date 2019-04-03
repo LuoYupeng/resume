@@ -110,3 +110,6 @@ section.message > #postMessageForm{
   padding: 16px;
   text-align: center
 }
+section.message > #postMessageForm > input[name='content']{
+  width: 200px;
+}
