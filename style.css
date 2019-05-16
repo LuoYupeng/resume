@@ -87,7 +87,7 @@ section.message >h2{ text-align: center; margin-bottom: 28px; margin-top: 28px; 
 section.portfolio >h2{ margin-bottom: 46px;}
 section.portfolio { text-align: center; margin-bottom: 100px;  }
 section.portfolio .swiper-container {width: 668px;height: 501px;}
-section.portfolio .swiper-container img{
+section.portfolio .swiper-container .swiper-slide img{
   width: 100%;
 }
 section.portfolio .swiper-container a{
