@@ -1,221 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>个人简历</title>
-  <script src="//at.alicdn.com/t/font_901955_04pph9kwd35t.js"></script> 
-  <!--<style type="text/css">
-    .loading{width: 200px;height: 200px; position: relative;}
-    .loading::before,.loading::after{ content:''; position: absolute; width: 0px;height: 0px; background: black;
-        border-radius: 50%; top: 0;left: 0; bottom: 0 ;right: 0; margin: auto;
-        animation:s 1.5s linear infinite;}
-    .loading::after{ animation-delay: 0.75s;}
-    @keyframes s{
-      0%{width: 0px; height: 0px; opacoty: 1;}
-      100%{width: 100px; height: 100px; opacity: 0;}
-    }
-    .site-welcome{
-      display: none; position: fixed; top: 0; left: 0; width:100%; height: 100%; background: #888;
-      z-index: 1; justify-content: center; align-items: center;
-    }
-    .site-welcome.active{display: flex;}
-    .icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-</style> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人简历</title>
+    <script src="//at.alicdn.com/t/font_901955_04pph9kwd35t.js"></script>
+    <!--<style type="text/css">
+      .loading{width: 200px;height: 200px; position: relative;}
+      .loading::before,.loading::after{ content:''; position: absolute; width: 0px;height: 0px; background: black;
+          border-radius: 50%; top: 0;left: 0; bottom: 0 ;right: 0; margin: auto;
+          animation:s 1.5s linear infinite;}
+      .loading::after{ animation-delay: 0.75s;}
+      @keyframes s{
+        0%{width: 0px; height: 0px; opacoty: 1;}
+        100%{width: 100px; height: 100px; opacity: 0;}
+      }
+      .site-welcome{
+        display: none; position: fixed; top: 0; left: 0; width:100%; height: 100%; background: #888;
+        z-index: 1; justify-content: center; align-items: center;
+      }
+      .site-welcome.active{display: flex;}
+      .icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
+  </style> -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-  <!--<div id="siteWelcome" class="site-welcome active">-->
-    <!--<div class="loading"></div>-->
-  <!--</div>-->
-  <div id="topNavBar" class="topNavBar">
+<!--<div id="siteWelcome" class="site-welcome active">-->
+<!--<div class="loading"></div>-->
+<!--</div>-->
+<div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
-      <a class="logo" href="#" alt="logo" style="float: left;">
-        <span class="rs">RS</span>
-        <span class="card">card</span>
-      </a>
-      <nav class="menu" style="float: right" ;>
-        <ul class="clearfix">
-          <li><a href="#siteAbout">关于</a></li>
-          <li><a href="#siteSkills">技能</a></li>
-          <li>
-            <a href="#siteWorks">作品</a>
-            <ul class="submenu">
-              <li>作品1</li>
-              <li>作品2</li>
-              <li>作品3</li>
-            </ul> 
-          </li>
-          <li>
-            <a href="#">博客</a>
-            <ul class="submenu">
-              <li>博客1</li>
-              <li>博客2</li>
-              <li>博客3</li>
+        <a class="logo" href="#" alt="logo" style="float: left;">
+            <span class="rs">个人</span>
+            <span class="card">简历</span>
+        </a>
+        <nav class="menu" style="float: right" ;>
+            <ul class="clearfix">
+                <li><a href="#siteAbout">关于</a></li>
+                <li><a href="#siteSkills">技能</a></li>
+                <li>
+                    <a href="#siteWorks">作品</a>
+                    <ul class="submenu">
+                    </ul>
+                </li>
+                <li>
+                    <a href=".message">留言</a>
+                </li>
             </ul>
-          </li>
-          <li><a href="#">日历</a></li>
-          <li><a href="#">联系方式</a></li>
-          <li><a href="#">其他</a></li>
-        </ul>
-      </nav>
+        </nav>
     </div>
-  </div>
+</div>
 
-  <div class="banner">
-     <div class="mask"></div>
-  </div>
+<div class="banner">
+    <div class="mask"></div>
+</div>
 
-  <main>
+<main>
 
-    <div  data-x  id="siteAbout" class="userCard">
-      <div class="pictureAndText clearfix">
-        <div class="picture">
-          <img src="./img/avatar.jpg" alt="头像" width="299" height="347">
-        </div>
-        <div class="text">
+    <div data-x id="siteAbout" class="userCard">
+        <div class="pictureAndText clearfix">
+            <div class="text">
           <span class="welcome">Hello
             <span class="triangle"></span>
           </span>
-          <h1>罗宇鹏</h1>
-          <p>前端开发工程师</p>
-          <hr>
-          <dl>
-            <dt>年龄</dt>
-            <dd>28</dd>
-            <dt>所在城市</dt>
-            <dd>广州</dd>
-            <dt>邮箱</dt>
-            <dd>461935859@qq.com</dd>
-            <dt>手机</dt>
-            <dd>15876525833</dd>
-          </dl>
-        </div> 
-      </div>
-      <footer class="media">
-        <a href="https://github.com/LuoYupeng" target="_blank">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-github"></use>
-          </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-blog1"></use>
-          </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-weixin"></use>
-          </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-qq"></use>
-          </svg>
-        </a>
-      </footer>
+                <h1>罗宇鹏</h1>
+                <p>初级前端开发工程师</p>
+                <hr>
+                <dl>
+                    <dt>年龄</dt>
+                    <dd>28</dd>
+                    <dt>所在城市</dt>
+                    <dd>广州</dd>
+                    <dt>邮箱</dt>
+                    <dd>461935859@qq.com</dd>
+                    <dt>手机/微信同号</dt>
+                    <dd>15876525833</dd>
+                </dl>
+            </div>
+            <div class="picture">
+                <img src="./img/WechatIMG2.jpeg" alt="wechat" width="150" height="150">
+            </div>
+        </div>
+
+        <footer class="media">
+            <a href="https://github.com/LuoYupeng" target="_blank">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            </a>
+            <a href="https://luoyupeng.github.io/archives/" target="_Blank">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-blog1"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-weixin"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            </a>
+        </footer>
     </div>
-    
+
     <p class="downloadResume-wrapper">
-      <a href="./download/resume.pdf" class="downloadResume" target="_blank" download>下 载 PDF 简 历</a>
+        <a href="./download/resume.pdf" class="downloadResume" target="_blank" download>下 载  简 历</a>
     </p>
-  
+
     <p class="selfIntroduction ">
-      罗宇鹏，初级前端工程师。 <br>
-      技能：前端开发。<br>
-      AAAAAAAAAAAAAAAAAAA<br>
-      BBBBBBBBBBBBBBBBBBB<br>
-      CCCCCCCCCCCCCCCCCCC<br>
+        个人介绍 <br>
+        熟悉 HTML、DIV + CSS <span>页面布局</span>，能根据设计图像素级完成页面制作，有移动端开发经验<br>
+
+        熟悉 HTML 5 及语义化，了解 Canvas 动画制作，掌握<span> CSS 3 动画</span>、过渡效果等常用技术<br>
+
+        了解原生 JavaScript，会使用 ES6+ 常用规范，<span>了解 jQuery</span> 常用 API 及思想<br>
+
+        <span>了解 Vue </span>常用功能，理解如生命周期、组件、数据响应式等概念，能够使用 Vue 上手开发项目<br>
+
+        熟悉模块化、工程化开发流程，<span>了解Webpack</span>配置<br>
+
+        <span>了解 HTTP</span> 相关知识，使用 VsCode、WebStorm、Sass、Git 等工具开发<br>
+
+
     </p>
-  
-  </main>
-  <section data-x id="siteSkills" class="skills">
+
+</main>
+<section data-x id="siteSkills" class="skills">
     <h2>技 能</h2>
     <ol class="clearfix">
-      <li>
-        <h3>HTML 5 &amp; CSS 3</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 85%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>JavaScript</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 75%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>jQuery</h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 78%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>Vue.js</h3> 
-        <div class="progressBar">
-          <div class="progress" style="width: 60%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>React.js </h3>
-        <div class="progressBar" >
-          <div class="progress" style="width: 40%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>Node.js </h3>
-          <div class="progressBar">
-            <div class="progress" style="width: 42%"></div>
-          </div>
+        <li>
+            <h3>HTML 5 &amp; CSS 3</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
         </li>
+        <li>
+            <h3>JavaScript</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 65%"></div>
+            </div>
+        </li>
+        <li>
+            <h3>jQuery</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 68%"></div>
+            </div>
+        </li>
+        <li>
+            <h3>Vue.js</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 50%"></div>
+            </div>
+        </li>
+        <!--<li>-->
+        <!--<h3>Node.js </h3>-->
+        <!--<div class="progressBar">-->
+        <!--<div class="progress" style="width: 42%"></div>-->
+        <!--</div>-->
+        <!--</li>-->
     </ol>
-  </section>
-  
-  <section data-x id="siteWorks" class="portfolio">
+</section>
+
+<section data-x id="siteWorks" class="portfolio">
     <h2>作 品 集</h2>
     <div id="mySlides">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <img class="swiper-slide" src="./img/works/nav-keyboard.jpg">
-          <img class="swiper-slide" src="./img/works/canvas.jpg">
-          <img class="swiper-slide" src="./img/works/slides.jpg">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                    <a href="https://luoyupeng.github.io/bookMarksNav-demo/" target="_Blank">键盘导航页，方便直观，个人极简</a>
+                    <img src="./img/works/nav-keyboard.jpg">
+                </div>
+                <div class="swiper-slide">
+
+                    <a href="https://luoyupeng.github.io/yourCanvas/" target="_Blank">简易在线画板，纯原生 JS 开发的</a>
+                    <img src="./img/works/canvas.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://luoyupeng.github.io/pure-css-fox/" target="_Blank">纯CSS画一只简易小狐狸,在线展示过程</a>
+                    <img src="./img/works/pure-css-fox.jpg">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-  </section>
+</section>
 
-  <section  class="message" >
+<section class="message">
     <h2>留言</h2>
     <ol id="messageList">
     </ol>
-    <form id="postMessageForm" >
-      <label for="">姓名:</label>
-      <input type="text" name="name">
-      <label for="">内容:</label>
-      <input type="text" name="content">
-      <input type="submit" value="提交">
+    <form id="postMessageForm">
+        <label for="">姓名</label>
+        <input type="text" name="name">
+        <label for="">内容</label>
+        <input type="text" name="content">
+        <input type="submit" value="提交">
     </form>
-  </section>
+</section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>  <!--缓动插件-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>  <!--缓动插件-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
 
-  <!--模块化-->
-  <script src="js/init-swiper.js"></script>
-  <script src="js/auto-slide-up.js"></script>
-  <script src="js/sticky-topbar.js"></script>
-  <script src="js/smoothly-navigation.js"></script>
-  <script src="js/message.js"></script>
+<!--模块化-->
+<script src="js/init-swiper.js"></script>
+<script src="js/auto-slide-up.js"></script>
+<script src="js/sticky-topbar.js"></script>
+<script src="js/smoothly-navigation.js"></script>
+<script src="js/message.js"></script>
 </body>
 </html>
